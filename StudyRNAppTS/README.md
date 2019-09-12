@@ -1,12 +1,12 @@
-#React Native勉強用
+# React Native勉強用
 
 https://note.mu/onota0318
 
-#準備
+# 準備
 https://facebook.github.io/react-native/docs/getting-started
 React Native CLI Quickstart
 
-#起動
+# 起動
 ## iOS
 
 ```
