@@ -14,10 +14,7 @@ import {
     SCREEN_ID as CREATE_SCREEN_ID,
 } from "@Component/ios/screen/CreateScreen";
 
-import { 
-    ReadScreen, 
-    SCREEN_ID as READ_SCREEN_ID,
-} from "@Component/ios/screen/ReadScreen";
+import ReadScreen, { SCREEN_ID as READ_SCREEN_ID } from "@Component/ios/screen/ReadScreen";
 
 import { 
     UpdateScreen, 
