@@ -1,5 +1,8 @@
 apply plugin: "com.android.application"
 
+// 2019/09/15 add 
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 import com.android.build.OutputFile
 
 /**
