@@ -6,6 +6,7 @@
  * @since XXXX/XX/XX
  */
 import React from "react";
+import Config from "react-native-config";
 import { StyleSheet } from "react-native";
 import { View, Text } from "native-base";
 import { NavigationProps } from "@Types/navigation";
@@ -38,6 +39,7 @@ export class CreateScreen extends React.Component<CreateScreenProps> {
                 alignItems: "center",                
             }}>
             <Text>{this.props.navigation.state.routeName}</Text>
+            <Text>{Config.ENV}</Text>
             </View>
         );
     }
