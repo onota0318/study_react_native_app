@@ -19,6 +19,11 @@
     "emulator-list:ios": "xcrun simctl list devices"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@react-native-firebase/app": "^0.5.2",
+    "@react-native-firebase/firestore": "^0.5.2",
+    "class-validator": "^0.10.0",
+    "firebase": "^6.6.2",
     "native-base": "^2.13.7",
     "react": "16.8.6",
     "react-native": "0.60.5",
@@ -38,7 +43,8 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -57,6 +63,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^6.3.0",
+    "firebase-tools": "^7.3.2",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "prettier": "1.18.2",

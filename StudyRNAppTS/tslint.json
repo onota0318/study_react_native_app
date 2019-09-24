@@ -30,10 +30,12 @@
             true, 
             [
                 "@Types",
+                "@Config",
                 "@Component",
                 "@Lib",
                 "@Store",
                 "@Middleware",
+                "@Logic",
                 "redux-devtools-extension"
             ]
         ],

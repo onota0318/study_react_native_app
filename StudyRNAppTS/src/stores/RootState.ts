@@ -3,15 +3,13 @@
  * 
  * @package Store
  */
-import { CounterState as counter } from "@Store/counter/CounterState";
+import { CounterState as Counter } from "@Store/counter/CounterState";
+import { InputFormState as InputForm } from "@Store/InputForm/InputFormState";
 
 /**
  * RootState
- * 
  */
 export interface RootState {
-    /**
-     * @property {string} hoge
-     */
-    counter: counter;
+    counter: Counter;
+    inputForm: InputForm;
 }

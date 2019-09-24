@@ -35,6 +35,7 @@
 		B58DDEAEDBCB4E1EA982DA03 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC7994A36225478FA1D50B96 /* Feather.ttf */; };
 		C262FFA16FB14590A4A1BA36 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9C5AE38C38B46748C418B8D /* MaterialIcons.ttf */; };
 		C612EABF859FDDB800E37421 /* libPods-StudyRNAppTSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163AD9AF1DE0F5FBAFCD9B0A /* libPods-StudyRNAppTSTests.a */; };
+		CFCF98D723375855008E0998 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFCF98D623375855008E0998 /* GoogleService-Info.plist */; };
 		D92881E36B924D38B8B728FA /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92BE8D53A24B45D492F0A8CB /* Octicons.ttf */; };
 		E1D1382393BE41E29FFD02BE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9989FB50C1E44AA98F22C9D /* Zocial.ttf */; };
 		E86FFB7BCC324AE384DC8FE9 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B09C789FEF9462880267478 /* Ionicons.ttf */; };
@@ -110,6 +111,7 @@
 		C67A4BFCFBE042A5B2CC1071 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		C9C5AE38C38B46748C418B8D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		CA25F57032DC43FFA1F69443 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		CFCF98D623375855008E0998 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E922A2A50A93457BBB1125DB /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		E95BA1478EBEDE8834B73191 /* Pods-StudyRNAppTS-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyRNAppTS-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-StudyRNAppTS-tvOS/Pods-StudyRNAppTS-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -252,6 +254,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CFCF98D623375855008E0998 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* StudyRNAppTS */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* StudyRNAppTSTests */,
@@ -324,6 +327,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				1A8F4401A6C9C8E934B548AC /* [CP] Copy Pods Resources */,
+				35E4A3D73DCEDF0B01B37AE7 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -450,6 +454,7 @@
 				D92881E36B924D38B8B728FA /* Octicons.ttf in Resources */,
 				21E6AA6219E648D883BBF291 /* SimpleLineIcons.ttf in Resources */,
 				E1D1382393BE41E29FFD02BE /* Zocial.ttf in Resources */,
+				CFCF98D723375855008E0998 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +513,7 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -527,6 +533,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Cpp.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -546,6 +553,16 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		35E4A3D73DCEDF0B01B37AE7 /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=3;\n_SEARCH_RESULT=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n_PLIST_ENTRY_KEYS=(\n  'firebase_crashlytics_collection_enabled'            #1\n  'FirebaseMessagingAutoInitEnabled'                   #2\n  'firebase_json_raw'                                  #3 - must always be last entry\n)\n\n_PLIST_ENTRY_TYPES=(\n  'bool'                                               #1\n  'bool'                                               #2\n  'string'                                             #3 - must always be last entry\n)\n\n_PLIST_ENTRY_VALUES=(\n  'NO'                                                 #1\n  'YES'                                                #2\n  'e30='                                               #3 - must always be last entry - base64 of {}\n)\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=`pwd`\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=`dirname \"$_CURRENT_SEARCH_DIR\"`\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=`find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | head -n 1`\n\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  __JSON_OUTPUT_RAW=`cat ${_SEARCH_RESULT}`\n  _SEARCH_RESULT=\"'$_SEARCH_RESULT'\"\n  _JSON_OUTPUT=`python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('${_SEARCH_RESULT}').read())['${_JSON_ROOT}'])))' || echo \"e30=\"`\n  _PLIST_ENTRY_VALUES[${#_PLIST_ENTRY_VALUES[@]}-1]=\"${_JSON_OUTPUT}\"\n  echo \"info:      firebase.json value: ${_JSON_OUTPUT}\"\n\n  # TODO figure out a better way to do this\n  if [[ ${__JSON_OUTPUT_RAW} == *\"\\\"messaging_auto_init_enabled\\\": false\"* ]]; then\n    _PLIST_ENTRY_VALUES[${#_PLIST_ENTRY_VALUES[@]}-2]=\"NO\"\n  fi\nelse\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Adding Info.plist entries: \"\n\nfor plist in ${_TARGET_PLIST} ${_DSYM_PLIST} ; do\n  if [[ -f ${plist} ]]; then\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue ${_PLIST_ENTRY_KEYS[$i]} ${_PLIST_ENTRY_TYPES[$i]} ${_PLIST_ENTRY_VALUES[$i]} ${plist}\n    done\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n\n\n\n";
 		};
 		3CAFEB83EC236655365B0E82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
