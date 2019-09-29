@@ -5,7 +5,7 @@
  * @since XXXX/XX/XX
  */
 import Config, { NativeConfig } from "react-native-config";
-import firebase, { ReactNativeFirebase } from "@react-native-firebase/app";
+import firebase from "@react-native-firebase/app";
 
 /**
  * AppEnvironment
@@ -26,15 +26,13 @@ class AppConfig {
     public readonly ENV: AppEnvironment = this.config.ENV;
     
     /** @property {string} Firebase Firebaseの設定周り */
-    private readonly firebase: ReactNativeFirebase.FirebaseApp = firebase.initializeApp({
-        appId: this.config.FIREBASE_APP_ID,
-        apiKey: this.config.FIREBASE_API_KEY,
-        projectId: this.config.FIREBASE_PROJECT_ID,
-        authDomain: this.config.FIREBASE_AUTH_DOMAIN,
-        databaseURL: this.config.FIREBASE_DATABASE_URL,
-        storageBucket: this.config.FIREBASE_STORAGE_BUCKET,
-        messagingSenderId: this.config.FIREBASE_MESSAGING_SENDER_ID,
-    });
+    public readonly FIREBASE_APP_ID: string = this.config.FIREBASE_APP_ID;
+    public readonly FIREBASE_API_KEY: string = this.config.FIREBASE_API_KEY;
+    public readonly FIREBASE_PROJECT_ID: string = this.config.FIREBASE_PROJECT_ID;
+    public readonly FIREBASE_AUTH_DOMAIN: string = this.config.FIREBASE_AUTH_DOMAIN;
+    public readonly FIREBASE_DATABASE_URL: string = this.config.FIREBASE_DATABASE_URL;
+    public readonly FIREBASE_STORAGE_BUCKET: string = this.config.FIREBASE_STORAGE_BUCKET;
+    public readonly FIREBASE_MESSAGING_SENDER_ID: string = this.config.FIREBASE_MESSAGING_SENDER_ID;
 
     ////////// ↑↑↑ここに追加↑↑↑ //////////
 
@@ -43,15 +41,24 @@ class AppConfig {
      * 
      * @param {NativeConfig} config config
      */
-    public constructor(private config: NativeConfig) {
-    }
+    public constructor(private config: NativeConfig) {}
 
     /**
-     * firebase Appを取得
-     * @returns {ReactNativeFirebase.FirebaseApp}
+     * initializeする
+     * @returns {void}
      */
-    public get firebaseApp(): ReactNativeFirebase.FirebaseApp {
-        return this.firebase;
+    public initialize(): void {
+
+        // firebase
+        firebase.initializeApp({
+            appId: this.FIREBASE_APP_ID,
+            apiKey: this.FIREBASE_API_KEY,
+            projectId: this.FIREBASE_PROJECT_ID,
+            authDomain: this.FIREBASE_AUTH_DOMAIN,
+            databaseURL: this.FIREBASE_DATABASE_URL,
+            storageBucket: this.FIREBASE_STORAGE_BUCKET,
+            messagingSenderId: this.FIREBASE_MESSAGING_SENDER_ID,
+        });
     }
 }
 

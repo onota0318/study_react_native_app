@@ -64,3 +64,6 @@ buck-out/
 
 #config
 /config/*.config
+
+#jest
+__snapshots__

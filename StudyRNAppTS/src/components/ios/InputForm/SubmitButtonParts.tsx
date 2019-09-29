@@ -14,6 +14,7 @@ import { Text, Button } from "native-base";
  * @interface
  */
 interface SubmitButtonPartsProps {
+
     /** @property {string} displayText displayText */
     displayText: string;
 

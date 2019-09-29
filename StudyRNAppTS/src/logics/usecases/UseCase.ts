@@ -9,6 +9,11 @@ import { ValidationException } from "@Lib/error/ValidationException";
 import { ValidationErrorsType } from "@Types/error";
 
 /**
+ * UseCaseFactory
+ */
+export abstract class UseCaseFactory {}
+
+/**
  * UseCase
  */
 export interface UseCase {

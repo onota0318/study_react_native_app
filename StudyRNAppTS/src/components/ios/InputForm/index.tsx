@@ -32,7 +32,7 @@ type InputFormProps = InputFormDispatchProps & InputFormState;
 /**
  * InputForm
  */
-class InputForm extends React.Component<InputFormProps> {
+export class InputForm extends React.Component<InputFormProps> {
 
     /**
      * @property {} state
@@ -56,11 +56,12 @@ class InputForm extends React.Component<InputFormProps> {
                 <View style={styles.wrap}>
                     {/* error */}
                     { this.props.errors !== undefined && this.props.errors.id !== undefined
-                        ? <Text>{ this.props.errors.id }</Text> 
+                        ? <Text test-id="input-error__id">{ this.props.errors.id }</Text> 
                         : null
                     }
 
                     <TextInputParts
+                        test-id="input-form__text_id"
                         placeholder="id"
                         value={ this.state.id }
                         onChangeText={ this.handleOnIdChange.bind(this) }
@@ -71,11 +72,12 @@ class InputForm extends React.Component<InputFormProps> {
                 <View style={styles.wrap}>
                     {/* error */}
                     { this.props.errors !== undefined && this.props.errors.imageUrl !== undefined
-                        ? <Text>{ this.props.errors.imageUrl }</Text> 
+                        ? <Text test-id="input-error__image_url">{ this.props.errors.imageUrl }</Text> 
                         : null
                     }
 
                     <TextInputParts
+                        test-id="input-form__text_image_url"
                         placeholder="image url"
                         value={ this.state.imageUrl }
                         onChangeText={ this.handleOnImageUrlChange.bind(this) }
@@ -86,11 +88,12 @@ class InputForm extends React.Component<InputFormProps> {
                 <View style={styles.wrap}>
                     {/* error */}
                     { this.props.errors !== undefined && this.props.errors.body !== undefined
-                        ? <Text>{ this.props.errors.body }</Text> 
+                        ? <Text test-id="input-error__body">{ this.props.errors.body }</Text> 
                         : null
                     }
 
                     <TextAreaParts
+                        test-id="input-form__textarea_body"
                         placeholder="body"
                         value={ this.state.body }
                         onChangeText={ this.handleOnBodyChange.bind(this) }
@@ -112,11 +115,12 @@ class InputForm extends React.Component<InputFormProps> {
      */
     private showLoadSpinnerOrButton = (isLoading: boolean = false) => {
         if (isLoading) {
-            return <ActivityIndicator size="small" />;
+            return <ActivityIndicator test-id="input-form__spinner" size="small" />;
         }
     
         return (
-            <SubmitButtonParts 
+            <SubmitButtonParts
+                test-id="input-form__submit"
                 displayText={ "送信" }
                 onPress={ this.handleOnSubmit.bind(this) }
             />

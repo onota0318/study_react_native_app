@@ -75,7 +75,7 @@ export const registerAction = (id: string, imageUrl: string, body: string) => {
             if (e instanceof ValidationException) {
                 errors = e.errors;
             } else {
-                // logging
+                // TODO: logging
                 console.log(e);
             }
 

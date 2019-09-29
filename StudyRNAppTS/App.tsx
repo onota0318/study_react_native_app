@@ -13,6 +13,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import { Platform } from "react-native";
 import { createAppContainer } from "react-navigation";
+import AppConfig from "@Config/AppConfig";
 import { initializeStore } from "@Store/InitializeStore";
 import { Routes as IOSRoutes } from "@Component/ios/routes";
 import { Routes as AndroidRoutes } from "@Component/android/routes";
@@ -37,6 +38,9 @@ const Container = createAppContainer(Route as any);
 
 // store
 const store = initializeStore();
+
+// AppConfig
+AppConfig.initialize();
 
 // App
 const App = () => (

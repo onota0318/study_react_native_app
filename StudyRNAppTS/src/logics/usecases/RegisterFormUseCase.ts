@@ -5,7 +5,7 @@
  * @since XXXX/XX/XX
  */
 import { IsNotEmpty, IsUrl } from "class-validator";
-import { ValidationSchema, UseCase, validate } from "@Logic/usecases/UseCase";
+import { ValidationSchema, UseCaseFactory, UseCase, validate } from "@Logic/usecases/UseCase";
 import { SampleListCollection } from "@Logic/models/SampleListCollection";
 
 /**
@@ -43,8 +43,10 @@ class Input implements ValidationSchema {
  * 
  * ※unittest対象外
  */
-export class RegisterFormUseCaseFactory {
+export class RegisterFormUseCaseFactory extends UseCaseFactory {
 
+    // TODO: test用にinstanceをinject出来る口を用意する
+    
     /**
      * create
      * 

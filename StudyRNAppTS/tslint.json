@@ -36,7 +36,11 @@
                 "@Store",
                 "@Middleware",
                 "@Logic",
-                "redux-devtools-extension"
+                "redux-devtools-extension",
+                "react-test-renderer",
+                "redux-mock-store",
+                "ts-mock-firebase",
+                "enzyme"
             ]
         ],
         "no-magic-numbers": false,
