@@ -71,7 +71,13 @@ export const Routes = createBottomTabNavigator({
             ),
         },
     },
-}, {});
+}, {
+    /*
+    defaultNavigationOptions: () => ({
+        tabBarOnPress: ({ defaultHandler }) => defaultHandler(),
+    }),
+    */
+});
 
 /**
  * BottomTabIconProps

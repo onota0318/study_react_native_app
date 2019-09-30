@@ -8,7 +8,7 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
 // import createLogger from "redux-logger";
-import { RootState } from "@Store/RootState";
+import { RootState, initialState } from "@Store/RootState";
 import { rootReducer } from "@Store/RootReducer";
 import { StoreWithThunk } from "@Types/store";
 
@@ -18,10 +18,9 @@ import { StoreWithThunk } from "@Types/store";
  * Storeを作成
  *
  * @export
- * @param {RootState} initialState
  * @returns {Store}
  */
-export function initializeStore(initialState?: RootState): Store<RootState> {
+export function initializeStore(): Store<RootState> {
 
     const store: StoreWithThunk<RootState> = createStore<RootState, AnyAction, any, any>(
         rootReducer,

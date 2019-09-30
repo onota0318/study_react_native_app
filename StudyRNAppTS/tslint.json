@@ -30,11 +30,17 @@
             true, 
             [
                 "@Types",
+                "@Config",
                 "@Component",
                 "@Lib",
                 "@Store",
                 "@Middleware",
-                "redux-devtools-extension"
+                "@Logic",
+                "redux-devtools-extension",
+                "react-test-renderer",
+                "redux-mock-store",
+                "ts-mock-firebase",
+                "enzyme"
             ]
         ],
         "no-magic-numbers": false,
