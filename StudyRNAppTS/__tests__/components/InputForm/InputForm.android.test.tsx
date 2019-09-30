@@ -1,5 +1,5 @@
 /**
- * InputForm[ios]のtest
+ * InputForm[android]のtest
  * 
  * @package Components
  * @since XXXX/XX/XX
@@ -8,12 +8,12 @@ import "react-native";
 import React from "react";
 import { ShallowWrapper } from "enzyme";
 import { getMockComponent } from "../../utils/TestUtil";
-import { InputForm } from "@Component/ios/InputForm"; // ← Redux Connectしてない状態のComponent
+import { InputForm } from "@Component/android/InputForm"; // ← Redux Connectしてない状態のComponent
 
 /**
- * InputForm[ios]のテスト
+ * InputForm[android]のテスト
  */
-describe("InputForm[ios]のテスト", () => {
+describe("InputForm[android]のテスト", () => {
     let component: ShallowWrapper;
 
     beforeEach(() => {

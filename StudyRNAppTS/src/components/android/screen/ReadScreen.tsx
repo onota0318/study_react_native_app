@@ -6,9 +6,10 @@
  * @since XXXX/XX/XX
  */
 import React from "react";
-import { StyleSheet } from "react-native";
-import { View, Container, Card, CardItem, Body, Text } from "native-base";
+import { StyleSheet, SafeAreaView } from "react-native";
+import { H1 } from "native-base";
 import { NavigationProps } from "@Types/navigation";
+import FlatCardList from "@Component/ios/card/FlatCardList";
 
 /**
  * @var {string} SCREEN_ID 画面ID
@@ -23,7 +24,7 @@ type ReadScreenProps = NavigationProps;
 /**
  * ReadScreen
  */
-export class ReadScreen extends React.Component<ReadScreenProps> {
+class ReadScreen extends React.Component<ReadScreenProps> {
 
     /**
      * render
@@ -32,13 +33,27 @@ export class ReadScreen extends React.Component<ReadScreenProps> {
      */
     public render(): React.ReactNode {
         return (
-            <View style={{
-                flex: 5,
-                justifyContent: "center",
-                alignItems: "center",                
-            }}>
-            <Text>{this.props.navigation.state.routeName}</Text>
-            </View>                    
+            <SafeAreaView style={ styles.container }>
+                <H1 style={ styles.h1 }>{ this.props.navigation.state.routeName }</H1>
+                <FlatCardList />
+            </SafeAreaView>           
         );
     }
 }
+
+/**
+ * style
+ */
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 10,
+        margin: 10,
+    },
+    h1: {
+        padding: 10,
+        margin: 10,
+    },
+});
+
+export default ReadScreen;

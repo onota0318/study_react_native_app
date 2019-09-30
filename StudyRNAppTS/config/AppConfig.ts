@@ -26,13 +26,15 @@ class AppConfig {
     public readonly ENV: AppEnvironment = this.config.ENV;
     
     /** @property {string} Firebase Firebaseの設定周り */
-    public readonly FIREBASE_APP_ID: string = this.config.FIREBASE_APP_ID;
-    public readonly FIREBASE_API_KEY: string = this.config.FIREBASE_API_KEY;
-    public readonly FIREBASE_PROJECT_ID: string = this.config.FIREBASE_PROJECT_ID;
-    public readonly FIREBASE_AUTH_DOMAIN: string = this.config.FIREBASE_AUTH_DOMAIN;
-    public readonly FIREBASE_DATABASE_URL: string = this.config.FIREBASE_DATABASE_URL;
-    public readonly FIREBASE_STORAGE_BUCKET: string = this.config.FIREBASE_STORAGE_BUCKET;
-    public readonly FIREBASE_MESSAGING_SENDER_ID: string = this.config.FIREBASE_MESSAGING_SENDER_ID;
+    public readonly firebaseConfig = {
+        appId: this.config.FIREBASE_APP_ID,
+        apiKey: this.config.FIREBASE_API_KEY,
+        projectId: this.config.FIREBASE_PROJECT_ID,
+        authDomain: this.config.FIREBASE_AUTH_DOMAIN,
+        databaseURL: this.config.FIREBASE_DATABASE_URL,
+        storageBucket: this.config.FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: this.config.FIREBASE_MESSAGING_SENDER_ID,
+    };
 
     ////////// ↑↑↑ここに追加↑↑↑ //////////
 
@@ -48,17 +50,12 @@ class AppConfig {
      * @returns {void}
      */
     public initialize(): void {
-
         // firebase
-        firebase.initializeApp({
-            appId: this.FIREBASE_APP_ID,
-            apiKey: this.FIREBASE_API_KEY,
-            projectId: this.FIREBASE_PROJECT_ID,
-            authDomain: this.FIREBASE_AUTH_DOMAIN,
-            databaseURL: this.FIREBASE_DATABASE_URL,
-            storageBucket: this.FIREBASE_STORAGE_BUCKET,
-            messagingSenderId: this.FIREBASE_MESSAGING_SENDER_ID,
-        });
+        // Androidの場合、Firebase App named '[DEFAULT]' already exists になる（なぜだ・・・）
+        // next.jsのissue https://github.com/zeit/next.js/issues/1999
+        if (firebase.apps.length <= 0) {
+            firebase.initializeApp(this.firebaseConfig);
+        }
     }
 }
 
