@@ -136,6 +136,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        // https://developer.android.com/studio/build/multidex?hl=ja
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -198,6 +200,8 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
     // implementation 'com.google.firebase:firebase-auth:17.2.0'
+    // https://developer.android.com/studio/build/multidex?hl=ja
+    implementation 'com.android.support:multidex:1.0.3'
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

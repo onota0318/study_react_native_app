@@ -1,14 +1,14 @@
 /**
- * Android TOP Component
+ * iOS TOP Component
  * 
  * @since 2019/XX/XX
  */
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { ThunkDispatch } from "redux-thunk";
 import { connect } from "react-redux";
-import { CounterValue } from "@Component/android/counter/Value";
-import { CounterButton } from "@Component/android/counter/Button";
+import { Dispatch } from "@Types/dispatch";
+import { CounterValue } from "@Component/ios/counter/Value";
+import { CounterButton } from "@Component/ios/counter/Button";
 import { RootState } from "@Store/RootState";
 import { addCountAction, resetCountAction } from "@Store/counter/CounterAction";
 
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
 
 /**
  * mapStateToProps
- * @param state 
+ * @param {RootState} state 
  */
 const mapStateToProps = (state: RootState) => ({ 
     ...state.counter,
@@ -129,9 +129,8 @@ const mapStateToProps = (state: RootState) => ({
 
 /**
  * mapDispatchToProps
- * @param dispatch 
+ * @param {Dispatch} dispatch 
  */
-type Dispatch = ThunkDispatch<any, void, any>;
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     dispatchAddCount(value: number): any {
         dispatch(addCountAction(value));

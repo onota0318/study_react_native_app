@@ -1,5 +1,5 @@
 /**
- * Android routes
+ * iOS routes
  * 
  * @package Component
  * @since XXXX/XX/XX
@@ -14,10 +14,7 @@ import {
     SCREEN_ID as CREATE_SCREEN_ID,
 } from "@Component/android/screen/CreateScreen";
 
-import { 
-    ReadScreen, 
-    SCREEN_ID as READ_SCREEN_ID,
-} from "@Component/android/screen/ReadScreen";
+import ReadScreen, { SCREEN_ID as READ_SCREEN_ID } from "@Component/android/screen/ReadScreen";
 
 import { 
     UpdateScreen, 
@@ -74,7 +71,13 @@ export const Routes = createBottomTabNavigator({
             ),
         },
     },
-}, {});
+}, {
+    /*
+    defaultNavigationOptions: () => ({
+        tabBarOnPress: ({ defaultHandler }) => defaultHandler(),
+    }),
+    */
+});
 
 /**
  * BottomTabIconProps

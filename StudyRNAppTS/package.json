@@ -14,7 +14,8 @@
     "clear:bundler-cache": "rm -rf /tmp/metro-bundler-cache-*",
     "clear:haste-cache": "rm -rf /tmp/haste-map-react-native-packager-*",
     "clear:pod": "cd ios; rm -rf build; pod install; cd ../",
-    "clear": "npm run clear:watchman; npm run clear:bundler-cache; npm run clear:haste-cache; npm run clear:pod",
+    "clear:gradlew": "cd android; ./gradlew clean cleanBuildCache; cd ../",
+    "clear": "npm run clear:watchman; npm run clear:bundler-cache; npm run clear:haste-cache; npm run clear:pod; npm run clear:gradlew",
     "emulator-list:android": "emulator -list-avds",
     "emulator-list:ios": "xcrun simctl list devices"
   },
