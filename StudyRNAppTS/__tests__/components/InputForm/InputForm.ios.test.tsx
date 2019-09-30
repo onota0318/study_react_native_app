@@ -78,7 +78,7 @@ describe("InputForm[ios]のテスト", () => {
                 onRegister: mockFn,
             });
 
-            component.find(SubmitButtonParts).props().onPress();
+            component.find({ "test-id": "input-form__submit" }).props().onPress();
             expect(mockFn).toHaveBeenCalled();
         });
     });
